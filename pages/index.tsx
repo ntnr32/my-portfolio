@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Script from 'next/script'
 import { useEffect } from 'react'
 import { useDarkMode } from '../common/hooks/useDarkMode'
-import { Section } from '../components'
+import { Hello, Section } from '../components'
 
 
 const Home: NextPage = () => {
@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   const [darkMode, setDarkMode] = useDarkMode();
 
   useEffect(() => {
-    setDarkMode(!darkMode);
+    setDarkMode(true);
     console.log('index loaded')
   }, [])
 
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
     <>
       <main className='bg-primary text-primary font-KnewaveRegular h-screen snap-y snap-mandatory overflow-y-scroll'>
         <Section className='section snap-start'>
-          <h1 className="font-KnewaveOutlineRegular lowercase text-9xl tracking-widest 2xl:text-[12rem]">Hello!</h1>
+          <Hello />
         </Section>
         <Section className='section snap-start'>
           <article className='grid gap-5'>

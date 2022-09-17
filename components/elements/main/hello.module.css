@@ -1,0 +1,41 @@
+.hello {
+  display: grid;
+  grid-auto-flow: row;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  height: inherit;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.one {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.two {
+  grid-column-start: 5;
+  grid-row-start: 2;
+}
+.three {
+  grid-column-start: 6;
+  grid-row-start: 3;
+}
+.four {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 3;
+}
+.five {
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+.six {
+  grid-column-start: 2;
+  grid-row-start: 5;
+}
+.seven {
+  grid-column-start: 6;
+  grid-row-start: 5;
+}
