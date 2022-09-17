@@ -11,7 +11,7 @@ export interface SectionProps {
 const Section: React.FC<SectionProps> = ({ className, children }) => {
 
     return (
-        <section className={`min-h-screen grid-center ${className}`}>
+        <section className={`h-screen grid-center ${className}`}>
             {children}
         </section>
     )

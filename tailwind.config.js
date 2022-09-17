@@ -7,12 +7,15 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      poppins: ['Poppins']
+      poppins: ['Poppins'],
+      KnewaveOutlineRegular: ['KnewaveOutlineRegular'],
+      KnewaveRegular: ['KnewaveRegular']
     },
     extend: {
       backgroundColor: {
         primary: 'var(--color-bg-primary)',
         secondary: 'var(--color-bg-secondary)',
+        invert: 'var(--color-bg-invert)'
       },
       textColor: {
         accent: 'var(--color-text-accent)',
