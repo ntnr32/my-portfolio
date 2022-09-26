@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 interface LogoProps {
     text: string
@@ -8,9 +9,11 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ text, path, className }) => {
     return (
-        <a className={`${className}`} href={path}>
-            <h1>{text}</h1>
-        </a>
+        <Link href={path}>
+            <a className={`${className}`}>
+                <h1>{text}</h1>
+            </a>
+        </Link>
     )
 }
 
