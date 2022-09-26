@@ -1,4 +1,4 @@
-import Button from 'components/controls/button/Button'
+import { NavButton as Button } from 'components'
 import React, { useState } from 'react'
 import { VscComment } from 'react-icons/vsc'
 
