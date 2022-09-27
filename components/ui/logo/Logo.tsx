@@ -10,7 +10,7 @@ interface LogoProps {
 const Logo: React.FC<LogoProps> = ({ text, path, className }) => {
     return (
         <Link href={path}>
-            <a className={`${className}`}>
+            <a className={`${className} sr-only`}>
                 <h1>{text}</h1>
             </a>
         </Link>

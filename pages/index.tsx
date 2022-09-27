@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { useEffect } from 'react'
 import { useDarkMode } from '../common/hooks/useDarkMode'
-import { Introduction, NavBar, Section, Welcome } from 'components'
+import { About, Arrow, ContactUs, Footer, Introduction, NavBar, Section, Welcome, Work } from 'components'
 
 
 const Home: NextPage = () => {
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <main className='font-KnewaveRegular'>
+      <main className='font-KnewaveRegular select-none'>
         <NavBar />
         <Section className='snap-start bg-map background'>
           <Welcome />
@@ -24,6 +24,17 @@ const Home: NextPage = () => {
         <Section className='snap-start mx-14'>
           <Introduction />
         </Section>
+        <Section className='snap-start mx-14'>
+          <About />
+        </Section>
+        <Section className='snap-start mx-14'>
+          <Work />
+        </Section>
+        <Section className='snap-start mx-14'>
+          <ContactUs />
+        </Section>
+        <Footer />
+        <Arrow />
       </main>
     </>
   )
