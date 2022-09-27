@@ -1,4 +1,5 @@
-import { NavButton as Button } from 'components'
+import { NavButton } from 'components'
+import Button from 'components/controls/button/Button';
 import React, { useState } from 'react'
 import { VscComment } from 'react-icons/vsc'
 
@@ -7,11 +8,7 @@ const Debug = () => {
 
     return (
         <div>
-            <label htmlFor="variant">
-                <input type="checkbox" name="variant" id="" onClick={() => setButtonVariant(buttonVariant === "regular" ? "outline" : "regular")} />
-                Variant - {buttonVariant}
-            </label>
-            <Button text='MENU' leadIcon={<VscComment />} variant={buttonVariant} />
+            Debug Page
         </div>
     )
 }

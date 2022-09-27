@@ -23,6 +23,7 @@ module.exports = {
       backgroundImage: {
         map: `url("${subPath}/svg/map.svg")`,
         circuit: `url("${subPath}/svg/circuit.svg")`,
+        work: `url("${subPath}/svg/work.svg")`,
       },
       textColor: {
         accent: 'var(--color-text-accent)',
