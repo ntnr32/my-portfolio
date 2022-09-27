@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import React from 'react'
+import Work from 'public/svg/work.svg'
 
 const Introduction = () => {
     return (
@@ -21,6 +21,7 @@ const Introduction = () => {
             </div>
             <div className='col-span-6'>
                 <div className='h-full '>
+                    <Work />
                 </div>
             </div>
         </div>
