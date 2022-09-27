@@ -4,7 +4,8 @@ const debug = process.env.NODE_ENV !== "production";
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  assetPrefix: !debug ? 'https://ntnr32.github.io/my-portfolio/' : '/'
+  basePath: !debug ? './my-portfolio/' : '',
+  assetPrefix: !debug ? './my-portfolio/' : '/'
 }
 
 module.exports = nextConfig

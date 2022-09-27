@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
@@ -16,6 +17,10 @@ module.exports = {
         primary: 'var(--color-bg-primary)',
         secondary: 'var(--color-bg-secondary)',
         invert: 'var(--color-bg-invert)'
+      },
+      backgroundImage: {
+        map: 'url("/svg/map.svg")',
+        circuit: 'url("/svg/circuit.svg")'
       },
       textColor: {
         accent: 'var(--color-text-accent)',

@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+:root {
+  --sub-path: "/my-portfolio";
+}
 .dark {
   --color-bg-primary: #171717;
   --color-bg-secondary: #313a55;
@@ -52,6 +54,34 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "KnewaveRegular";
+  src: url("/my-portfolio/fonts/knewave/knewave-webfont.eot");
+  src: url("/my-portfolio/fonts/knewave/knewave-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("/my-portfolio/fonts/knewave/knewave-webfont.woff") format("woff"),
+    url("/my-portfolio/fonts/knewave/knewave-webfont.ttf") format("truetype"),
+    url("/my-portfolio/fonts/knewave/knewave-webfont.svg#KnewaveRegular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KnewaveOutlineRegular";
+  src: url("/my-portfolio/fonts/knewave/knewave-outline-webfont.eot");
+  src: url("/my-portfolio/fonts/knewave/knewave-outline-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("/my-portfolio/fonts/knewave/knewave-outline-webfont.woff")
+      format("woff"),
+    url("/my-portfolio/fonts/knewave/knewave-outline-webfont.ttf")
+      format("truetype"),
+    url("/my-portfolio/fonts/knewave/knewave-outline-webfont.svg#KnewaveOutlineRegular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -59,7 +89,6 @@
 }
 
 .background {
-  background: url("/svgs/bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
