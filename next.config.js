@@ -4,8 +4,7 @@ const debug = process.env.NODE_ENV !== "production";
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: !debug ? './my-portfolio/' : '',
-  assetPrefix: !debug ? './my-portfolio/' : '/'
+  basePath: !debug ? '/my-portfolio' : ''
 }
 
 module.exports = nextConfig

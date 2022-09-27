@@ -1,3 +1,5 @@
+const debug = process.env.NODE_ENV !== "production";
+const subPath = !debug ? "/my-portfolio" : "";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -19,8 +21,8 @@ module.exports = {
         invert: 'var(--color-bg-invert)'
       },
       backgroundImage: {
-        map: 'url("/svg/map.svg")',
-        circuit: 'url("/svg/circuit.svg")'
+        map: `url("${subPath}/svg/map.svg")`,
+        circuit: `url("${subPath}/svg/circuit.svg")`,
       },
       textColor: {
         accent: 'var(--color-text-accent)',
