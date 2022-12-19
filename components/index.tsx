@@ -10,4 +10,4 @@ export {
     ContactUs,
     Footer
 } from './ui'
-export { NavButton, Button } from './controls'
+export { NavButton, Button, Input } from './controls'

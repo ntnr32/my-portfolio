@@ -30,9 +30,6 @@ const Home: NextPage = () => {
         <Section className='snap-start mx-14'>
           <Work />
         </Section>
-        <Section className='snap-start mx-14'>
-          <ContactUs />
-        </Section>
         <Footer />
         <Arrow />
       </main>
