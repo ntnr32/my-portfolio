@@ -1,6 +1,7 @@
 import React from 'react'
-import Work from 'public/svg/work.svg'
+import Work from '/public/svg/work.svg'
 import * as CONSTANT from 'utils/constant'
+import Image from 'next/image'
 
 const Introduction = () => {
     return (
