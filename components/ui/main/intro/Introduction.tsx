@@ -1,6 +1,6 @@
 import React from 'react'
 import * as CONSTANT from 'utils/constant'
-import Work from 'public/svg/work.svg'
+import Work from '../../../../common/static/svgs/work.svg'
 
 const Introduction = () => {
     return (
