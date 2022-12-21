@@ -1,7 +1,5 @@
 import React from 'react'
-import Work from '/public/svg/work.svg'
 import * as CONSTANT from 'utils/constant'
-import Image from 'next/image'
 
 const Introduction = () => {
     return (
@@ -26,7 +24,7 @@ const Introduction = () => {
             </div>
             <div className='grid content-end xl:content-center'>
                 <div className='p-10 h-full w-full'>
-                    <Work />
+                    <img src='/svg/work.svg' alt='work' />
                 </div>
             </div>
         </div>
