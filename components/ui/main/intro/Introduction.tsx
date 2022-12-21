@@ -1,5 +1,6 @@
 import React from 'react'
 import Work from 'public/svg/work.svg'
+import * as CONSTANT from 'utils/constant'
 
 const Introduction = () => {
     return (
@@ -14,7 +15,7 @@ const Introduction = () => {
                     <span className='mr-3 inline'>my</span>
                     <span className='mr-3'>name</span>
                     <span className='mr-3'>is</span>
-                    <span className='mr-3 font-KnewaveRegular'>NITIN.</span>
+                    <span className='mr-3 font-KnewaveRegular'>{CONSTANT.TITLE_NAME}</span>
                 </h1>
                 <h2 className='text-base'>
                     <span>Azure</span>
