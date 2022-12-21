@@ -1,5 +1,5 @@
 const debug = process.env.NODE_ENV !== "production";
-const subPath = !debug ? "/my-portfolio" : "";
+const subPath = debug ? '' : '/my-portfolio';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -42,5 +42,9 @@ module.exports = {
       cursor: ['disabled']
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')({
+      strategy: 'class',
+    })
+  ],
 }

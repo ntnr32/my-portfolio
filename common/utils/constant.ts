@@ -1,3 +1,3 @@
 export const APP_NAME = 'Portfolio';
 
-export const NITIN = 'NITIN.';
+export const TITLE_NAME = 'NITIN.';

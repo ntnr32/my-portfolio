@@ -1,2 +1,13 @@
-export { Section, Hello, Welcome, NavBar, Introduction } from './ui'
-export { NavButton, Button } from './controls'
+export {
+    Section,
+    NavBar,
+    Arrow,
+    Hello,
+    Welcome,
+    Introduction,
+    About,
+    Work,
+    ContactUs,
+    Footer
+} from './ui'
+export { NavButton, Button, Input } from './controls'
