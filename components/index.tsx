@@ -1,4 +1,5 @@
 export {
+    Layout,
     Section,
     NavBar,
     Arrow,
