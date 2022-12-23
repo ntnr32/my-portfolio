@@ -1,6 +1,8 @@
 import React from 'react'
 import * as CONSTANT from 'utils/constant'
 import Work from 'static/svg/work.svg'
+import MegaphoneColor from 'static/svg/megaphone-color.svg'
+
 
 const Introduction = () => {
     return (
@@ -24,8 +26,8 @@ const Introduction = () => {
                 </h2>
             </div>
             <div className='grid content-end xl:content-center'>
-                <div className='p-12 2xl:p-56 h-full w-full'>
-                    <Work />
+                <div className='p-36 h-full w-full'>
+                    <MegaphoneColor />
                 </div>
             </div>
         </div>
