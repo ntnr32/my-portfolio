@@ -1,3 +1,4 @@
+import Layout from './main/layout/Layout';
 import Section from './section/Section';
 import Hello from './main/hello/Hello'
 import Welcome from './main/welcome/Welcome';
@@ -12,6 +13,7 @@ import ContactUs from './main/contact/ContactUs';
 import Footer from './footer/Footer';
 
 export {
+    Layout,
     Section,
     Hello,
     NavBar,
