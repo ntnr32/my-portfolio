@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <main className='font-KnewaveRegular select-none'>
+      <main className='font-KnewaveRegular select-none bg-dots'>
         <NavBar />
         <Section className='snap-start bg-map background'>
           <Welcome />

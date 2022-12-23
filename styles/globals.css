@@ -96,6 +96,13 @@
   max-width: 100%;
 }
 
+.background-overlay {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position: center top;
+  background-size: 1400px;
+}
+
 .wave {
   animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
   animation-duration: 2.5s; /* Change to speed up or slow down */
@@ -110,7 +117,7 @@
   }
   10% {
     transform: rotate(14deg);
-  } 
+  }
   20% {
     transform: rotate(-8deg);
   }
@@ -125,7 +132,7 @@
   }
   60% {
     transform: rotate(0deg);
-  } 
+  }
   100% {
     transform: rotate(0deg);
   }

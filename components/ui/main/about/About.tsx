@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 const About = () => {
     return (
-        <div className='grid gap-10'>
-            <h1 className='font-KnewaveOutlineRegular text-center text-4xl'>About Me</h1>
+        <div className='font-poppins grid gap-10'>
+            <h1 className='font-bold text-center text-4xl'>About Me</h1>
             <div className='grid grid-cols-2 gap-4'>
                 <div className='hidden sm:grid content-center'>
                 </div>
