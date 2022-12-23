@@ -1,12 +1,14 @@
 import React from 'react'
-import Image from 'next/image'
+import BoyColor from 'static/svg/boy-color.svg'
+import BoyPremium from 'static/svg/boy-premium.svg'
 
 const About = () => {
     return (
-        <div className='font-poppins grid gap-10'>
+        <div className='font-poppins grid p-28'>
             <h1 className='font-bold text-center text-4xl'>About Me</h1>
             <div className='grid grid-cols-2 gap-4'>
-                <div className='hidden sm:grid content-center'>
+                <div className='hidden sm:grid content-center p-28'>
+                    <BoyColor />
                 </div>
                 <div className='grid content-center col-span-2 sm:col-span-1 gap-4'>
                     <p>Hi there!, I&apos;m Nitin Res. I build things for the web.</p>
