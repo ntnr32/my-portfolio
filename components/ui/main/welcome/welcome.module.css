@@ -1,0 +1,11 @@
+@media (hover: hover) {
+  .word:hover {
+    @apply hover:text-[7vw];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500;
+    transition-property: all;
+    transition-duration: 500ms;
+    /* Add and remove additional space to get the text cut off issue fixed */
+    padding-left: 0.2em;
+    margin-left: -0.2em;
+  }
+}

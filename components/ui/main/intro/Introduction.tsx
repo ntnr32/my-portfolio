@@ -1,6 +1,5 @@
 import React from 'react'
 import * as CONSTANT from 'utils/constant'
-import Work from 'static/svg/work.svg'
 import MegaphoneColor from 'static/svg/megaphone-color.svg'
 
 
