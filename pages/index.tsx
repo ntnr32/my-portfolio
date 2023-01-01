@@ -1,9 +1,9 @@
+import React from 'react'
 import type { NextPage } from 'next'
-import { useEffect } from 'react'
-import { useDarkMode } from '../common/hooks/useDarkMode'
-import { About, Arrow, ContactUs, Footer, Introduction, Section, Welcome, Work } from 'components'
+import { About, ContactUs, Footer, Introduction, Section, Welcome, Work } from 'components'
 
 const Home: NextPage = () => {
+
   return (
     <>
       <Section className='snap-start bg-map background'>
@@ -18,8 +18,6 @@ const Home: NextPage = () => {
       <Section className='snap-start mx-14'>
         <Work />
       </Section>
-      <Footer />
-      <Arrow />
     </>
   )
 }

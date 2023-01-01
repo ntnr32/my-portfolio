@@ -19,7 +19,10 @@ const NavButton: React.FC<NavButtonProps> = ({ className, children, onClick, lea
     }, [variant])
 
     return (
-        <button className={`flex gap-4 px-4 py-2 place-items-center ${style} ${className}`}>
+        <button
+            className={`flex gap-4 px-4 py-2 place-items-center ${style} ${className}`}
+            onClick={onClick}
+        >
             {leadIcon && <span>{leadIcon}</span>}
             <span className='hidden sm:block'>{children}</span>
             {tailIcon && <span>{tailIcon}</span>}
