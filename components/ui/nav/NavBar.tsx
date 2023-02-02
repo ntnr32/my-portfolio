@@ -3,12 +3,11 @@ import { Button, NavButton } from 'components/controls'
 import * as CONSTANT from 'utils/constant'
 import { Logo } from '..'
 import { VscComment, VscMenu } from 'react-icons/vsc'
-import Link from 'next/link'
 
 const sayHello = () => {
     console.log('test');
-    
-    window.location.href = "mailto:ntnr32@gmail.com"
+
+    window.location.href = `mailto:${CONSTANT.EMAIL_ADDRESS}`
 }
 
 const NavBar = () => {

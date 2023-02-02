@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Arrow, NavBar } from 'components'
 import { useDarkMode } from 'common/hooks/useDarkMode';
+import SocialLink from '../widgets/SocialLink';
+import EmailLink from '../widgets/EmailLink';
+
 
 interface ILayoutProps {
     children: React.ReactNode
@@ -35,7 +38,9 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => {
             className='font-KnewaveRegular select-none bg-dots h-screen snap-y snap-mandatory overflow-y-scroll'>
             <NavBar />
             {children}
-            {!isLastScreen && <Arrow />}
+            {/* {!isLastScreen && <Arrow />} */}
+            <SocialLink />
+            <EmailLink />
         </main>
     )
 }

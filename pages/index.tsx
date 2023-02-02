@@ -9,13 +9,13 @@ const Home: NextPage = () => {
       <Section className='snap-start bg-map background'>
         <Welcome />
       </Section>
-      <Section className='snap-start mx-14'>
+      <Section className='snap-start mx-14 md:mx-40'>
         <Introduction />
       </Section>
       <Section className='snap-start mx-14'>
         <About />
       </Section>
-      <Section className='snap-start mx-14'>
+      <Section className='snap-start mx-14 md:mx-40'>
         <Work />
       </Section>
     </>

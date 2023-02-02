@@ -14,7 +14,7 @@ const Welcome = () => {
                 <Word className={`block sm:inline ${style.word} ${style['word-color']}`}>place.</Word>
             </h1>
             <h2 className={`font-KnewaveRegular text-[2vw] text-center`}>
-                All Creative people want to do the unexpected
+                Crafting digital experiences, one line of code at a time.
             </h2>
         </div>
     )

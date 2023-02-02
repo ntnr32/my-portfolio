@@ -2,6 +2,8 @@ export const APP_NAME = 'Portfolio';
 
 export const TITLE_NAME = 'NITIN.';
 
+export const EMAIL_ADDRESS = 'ntnr32@gmail.com';
+
 export const MIME_TYPE = {
     json: "application/json",
     jsonp: "application/jsonp",

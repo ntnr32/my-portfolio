@@ -10,11 +10,13 @@
     "export": "next export"
   },
   "dependencies": {
+    "@next/font": "^13.1.6",
     "framer-motion": "^8.0.2",
     "next": "12.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-intersection-observer": "^9.4.0"
+    "react-intersection-observer": "^9.4.0",
+    "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.5.1",
