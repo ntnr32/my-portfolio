@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
+import SnakeButton from 'components/controls/button/SnakeButton'
 
 const Stats = () => {
-    
+
     return (
-        <div>
-            Debug Page
+        <div className='grid place-items-center h-screen'>
+            <SnakeButton className='' />
         </div>
     )
 }

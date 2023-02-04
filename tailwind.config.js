@@ -11,8 +11,10 @@ module.exports = {
   theme: {
     fontFamily: {
       poppins: ['Poppins'],
+      MajorMonoDisplay: ['Major Mono Display'],
+      Monoton: ['Monoton'],
       KnewaveOutlineRegular: ['KnewaveOutlineRegular'],
-      KnewaveRegular: ['KnewaveRegular']
+      KnewaveRegular: ['KnewaveRegular'],
     },
     extend: {
       backgroundColor: {

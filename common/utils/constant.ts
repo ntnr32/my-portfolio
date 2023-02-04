@@ -4,6 +4,9 @@ export const TITLE_NAME = 'NITIN.';
 
 export const EMAIL_ADDRESS = 'ntnr32@gmail.com';
 
+// TODO: Implement multi-language support
+
+
 export const MIME_TYPE = {
     json: "application/json",
     jsonp: "application/jsonp",

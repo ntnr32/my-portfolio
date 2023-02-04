@@ -7,6 +7,7 @@ export default function Document() {
             <Head />
             <body className='bg-primary text-primary'>
                 <Main />
+                <div id='navMenu' />
                 <NextScript />
             </body>
         </Html>

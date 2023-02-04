@@ -6,10 +6,10 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Section className='snap-start bg-map background'>
+      <Section className='snap-start bg-map background font-Monoton'>
         <Welcome />
       </Section>
-      <Section className='snap-start mx-14 md:mx-40'>
+      <Section id="Introduction" className='snap-start mx-14 md:mx-40'>
         <Introduction />
       </Section>
       <Section className='snap-start mx-14'>

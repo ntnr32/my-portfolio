@@ -35,7 +35,7 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => {
     return (
         <main
             onScroll={onScrollHandler} ref={pageRef as React.RefObject<HTMLDivElement>}
-            className='font-KnewaveRegular select-none bg-dots h-screen snap-y snap-mandatory overflow-y-scroll'>
+            className='font-MajorMonoDisplay select-none bg-dots h-screen snap-y snap-mandatory overflow-y-scroll'>
             <NavBar />
             {children}
             {/* {!isLastScreen && <Arrow />} */}

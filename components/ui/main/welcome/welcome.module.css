@@ -6,10 +6,14 @@
   }
 
   .word:hover {
-    @apply text-[7vw] font-KnewaveRegular;
+    @apply text-[4vw];
     @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500;
     /* Add and remove additional space to get the text cut off issue fixed */
     padding-left: 0.2em;
     margin-left: -0.2em;
   }
+}
+
+.word-clip {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500;
 }

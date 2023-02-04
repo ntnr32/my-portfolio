@@ -4,7 +4,7 @@ import BoyPremium from 'static/svg/boy-premium.svg'
 
 const About = () => {
     return (
-        <div className='font-poppins grid gap-y-10 m-auto xl:p-28'>
+        <div className='grid gap-y-10 m-auto xl:p-28'>
             <h1 className='font-bold text-center text-4xl'>About Me</h1>
             <div className='grid grid-cols-2 gap-4'>
                 <div className='hidden sm:grid content-center xl:px-28'>

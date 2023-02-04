@@ -2,7 +2,7 @@ import React from 'react'
 
 const Work = () => {
     return (
-        <div className='font-poppins grid grid-cols-1 sm:grid-cols-2 gap-y-8 sm:gap-8'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-y-8 sm:gap-8'>
             <div className='grid gap-8'>
                 <h1 className='text-4xl leading-normal font-bold'>
                     <span className='bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
