@@ -5,7 +5,9 @@ import BoyPremium from 'static/svg/boy-premium.svg'
 const About = () => {
     return (
         <div className='grid gap-y-10 m-auto xl:p-28'>
-            <h1 className='font-bold text-center text-4xl'>About Me</h1>
+            <h1 className='font-bold text-center text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
+                About Me
+            </h1>
             <div className='grid grid-cols-2 gap-4'>
                 <div className='hidden sm:grid content-center xl:px-28'>
                     <BoyColor />

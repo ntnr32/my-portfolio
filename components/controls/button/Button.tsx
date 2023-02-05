@@ -10,7 +10,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ className, children, onClick, leadIcon, tailIcon, variant = "regular" }) => {
-
+    //TODO: Create a new button component which only shows icon without box 
     const [style, setStyle] = useState('');
 
     useEffect(() => {
@@ -19,7 +19,9 @@ const Button: React.FC<ButtonProps> = ({ className, children, onClick, leadIcon,
     }, [variant])
 
     return (
-        <button className={`flex gap-4 px-4 py-2 place-items-center ${style} ${className}`}>
+        <button className={`flex gap-4 px-4 py-2 place-items-center ${style} ${className}`}
+            onClick={onClick}
+        >
             {leadIcon && <span className='block sm:hidden'>{leadIcon}</span>}
             <span className='hidden sm:block'>{children}</span>
             {tailIcon && <span className='block sm:hidden'>{tailIcon}</span>}

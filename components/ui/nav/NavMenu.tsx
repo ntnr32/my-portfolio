@@ -1,6 +1,11 @@
+import React from 'react'
 import Link from 'next/link';
-import React, { useState, useRef, useEffect } from 'react'
-import { createPortal } from 'react-dom';
+import { GrClose } from 'react-icons/gr';
+import { Button } from 'components/controls';
+interface NavMenuProps {
+    open: boolean;
+    setOpen: (open: boolean) => void;
+}
 
 const menuItems = [
     {
@@ -14,35 +19,32 @@ const menuItems = [
     },
 ];
 
-const NavMenu = () => {
-    const ref = useRef<Element | null>(null);
-    const [mounted, setMounted] = useState(false);
+const NavMenu: React.FC<NavMenuProps> = ({ open, setOpen }) => {
 
-    useEffect(() => {
-        ref.current = document.getElementById('navMenu');
-        setMounted(true);
-    }, [])
+    const visibility = open ? 'block' : 'hidden';
 
-    return (mounted && ref.current) ?
-        createPortal(
-            <>
-                <div className='fixed inset-y-0 w-full h-full bg-primary opacity-50'></div>
-                <div className='fixed top-0 right-0 z-0 inset-y-0 pt-20 m-auto w-full h-full overflow-x-hidden'>
-                    <ul className="text-center grid gap-2">
-                        {
-                            menuItems.map(({ name, id, path }) => {
-                                return (
-                                    <li key={id} className="transition-all hover:border-b-2 border-gray-200 p-2 m-auto text-gray-400 hover:text-white">
-                                        <Link href={path} className="no-underline">{name}</Link>
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
+    return (
+        <>
+            <div className={`z-0 fixed w-30 h-30 bg-black sm:pr-5 h-screen w-screen ${visibility}`}>
+                <div className='grid justify-end h-20 md:my-4 md:px-10 min-w-full'>
+                    <Button className='my-auto mx-5 sm:mx-0' onClick={() => setOpen(!open)} leadIcon={<GrClose />} >
+                        Close
+                    </Button>
                 </div>
-            </>
-            , ref.current!)
-        : null;
+                <ul className="grid gap-2">
+                    {
+                        menuItems.map(({ name, id, path }) => {
+                            return (
+                                <li key={id} className="transition-all hover:border-b-2 border-gray-200 p-2 m-auto text-gray-400 hover:text-white">
+                                    <Link href={path} className="no-underline">{name}</Link>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            </div>
+        </>
+    )
 }
 
 export default NavMenu

@@ -1,30 +1,50 @@
-import React from 'react'
-import { Button, NavButton } from 'components/controls'
+import React, { useState } from 'react'
+import { Button } from 'components/controls'
 import * as CONSTANT from 'utils/constant'
 import { Logo } from '..'
-import { VscComment, VscMenu } from 'react-icons/vsc'
+import { VscMenu } from 'react-icons/vsc'
 import NavMenu from './NavMenu'
 
 const sayHello = () => {
-    console.log('test');
-
     window.location.href = `mailto:${CONSTANT.EMAIL_ADDRESS}`
 }
 
+const menuItems = [
+    {
+        name: 'Home',
+        id: 'home',
+        path: '/'
+    }, {
+        name: 'Tech Stack',
+        id: 'tech-stack',
+        path: '/tech-stack'
+    },
+];
+
 const NavBar = () => {
+
+    const [open, setOpen] = useState<boolean>(false);
+    const handleOpen = () => setOpen(!open);
+
     return (
-        <nav className="top-0 left-0 fixed h-20 flex justify-between md:my-4 md:px-10 min-w-full">
-            <Logo path='/' text={CONSTANT.TITLE_NAME} className='p-4 text-lg my-auto' />
-            <div className='flex p-4 gap-4 font-bold'>
-                <NavMenu />
-                <Button className='uppercase' variant='regular' leadIcon={<VscMenu />} >Menu</Button>
-                <NavButton
-                    className='uppercase' variant='outline'
-                    tailIcon={<VscComment />}
-                    onClick={sayHello}
-                >Say Hello</NavButton>
+        <header className=''>
+            <div className='top-0 left-0 fixed h-20 flex justify-between md:my-4 md:px-10 min-w-full'>
+                <Logo
+                    path='/'
+                    text={CONSTANT.TITLE_NAME}
+                    className='p-4 text-lg my-auto'
+                />
+                <Button
+                    className={`uppercase my-auto mx-5`}
+                    variant='regular'
+                    leadIcon={<VscMenu />}
+                    onClick={handleOpen}
+                >
+                    Menu
+                </Button>
             </div>
-        </nav >
+            <NavMenu open={open} setOpen={setOpen} />
+        </header >
     )
 }
 
