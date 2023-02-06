@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 import * as CONSTANT from 'utils/constant'
 import styles from './widget.module.css'
@@ -8,7 +9,11 @@ const EmailLink = () => {
 
     return (
         <div className={`font-MajorMonoDisplay hidden md:grid grid-flow-row px-14 gap-4 text-gray-400 bottom-0 right-0 fixed ${afterStyle}`}>
-            <a className={`${styles.vertical}`} href={`mailto:${CONSTANT.EMAIL_ADDRESS}`}>{CONSTANT.EMAIL_ADDRESS}</a>
+            <Link href={`mailto:${CONSTANT.EMAIL_ADDRESS}`}>
+                <a className={`${styles.vertical}`}>
+                    {CONSTANT.EMAIL_ADDRESS}
+                </a>
+            </Link>
         </div>
     )
 }

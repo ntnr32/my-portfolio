@@ -6,16 +6,16 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Section className='snap-start bg-map background font-Monoton'>
+      <Section id="welcome" className='snap-start bg-map background font-Monoton'>
         <Welcome />
       </Section>
-      <Section id="Introduction" className='snap-start mx-14 md:mx-40'>
+      <Section id="introduction" className='snap-start mx-14 md:mx-40'>
         <Introduction />
       </Section>
-      <Section className='snap-start mx-14'>
+      <Section id="about" className='snap-start mx-14'>
         <About />
       </Section>
-      <Section className='snap-start mx-14 md:mx-40'>
+      <Section id="work" className='snap-start mx-14 md:mx-40'>
         <Work />
       </Section>
     </>

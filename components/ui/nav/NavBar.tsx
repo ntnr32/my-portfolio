@@ -4,6 +4,7 @@ import * as CONSTANT from 'utils/constant'
 import { Logo } from '..'
 import { VscMenu } from 'react-icons/vsc'
 import NavMenu from './NavMenu'
+import Link from 'next/link'
 
 const sayHello = () => {
     window.location.href = `mailto:${CONSTANT.EMAIL_ADDRESS}`
@@ -43,7 +44,7 @@ const NavBar = () => {
                     Menu
                 </Button>
             </div>
-            <NavMenu open={open} setOpen={setOpen} />
+            {open && <NavMenu open={open} setOpen={setOpen} />}
         </header >
     )
 }
