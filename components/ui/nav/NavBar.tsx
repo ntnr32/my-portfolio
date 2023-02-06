@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { Button } from 'components/controls'
+import { motion, AnimatePresence } from 'framer-motion'
 import * as CONSTANT from 'utils/constant'
 import { Logo } from '..'
+import { Button } from 'components/controls'
 import { VscMenu } from 'react-icons/vsc'
 import NavMenu from './NavMenu'
-import Link from 'next/link'
 
 const sayHello = () => {
     window.location.href = `mailto:${CONSTANT.EMAIL_ADDRESS}`
@@ -44,7 +44,9 @@ const NavBar = () => {
                     Menu
                 </Button>
             </div>
-            {open && <NavMenu open={open} setOpen={setOpen} />}
+            <AnimatePresence>
+                {open && <NavMenu open={open} setOpen={setOpen} />}
+            </AnimatePresence>
         </header >
     )
 }
