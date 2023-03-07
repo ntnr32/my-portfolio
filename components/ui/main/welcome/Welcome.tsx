@@ -7,7 +7,11 @@ import { motion } from 'framer-motion'
 const Welcome = () => {
 
     return (
-        <div className={`grid overflow-hidden`}>
+        <div className={`grid overflow-hidden`}
+            // initial={{ scale: 0.5 }}
+            // animate={{ scale: 1 }}
+            // transition={{ duration: 0.5 }}
+        >
             <h1
                 className={`text-center text-[12vw] sm:text-[5vw] cursor-pointer`}>
                 <Word className={`mr-[2vw] inline-block sm:inline ${style.word}`}>Web</Word>
@@ -21,8 +25,6 @@ const Welcome = () => {
                 <Typewriter
                     words={['one line of code at a time.']}
                     loop={true}
-                    cursor
-                    cursorStyle='_'
                 />
             </h2>
         </div>

@@ -13,25 +13,25 @@ const menuItems = [
         name: 'Welcome',
         id: 'welcome',
         path: '/#welcome',
-        transitionDelay: 0.8,
+        transitionDelay: 1.2,
         exitDelay: 1
     }, {
         name: 'Introduction',
         id: 'introduction',
         path: '/#introduction',
-        transitionDelay: 0.7,
+        transitionDelay: 1,
         exitDelay: 0.8
     }, {
         name: 'About',
         id: 'about',
         path: '/#about',
-        transitionDelay: 0.6,
+        transitionDelay: 0.8,
         exitDelay: 0.6
     }, {
         name: 'Work',
         id: 'work',
         path: '/#work',
-        transitionDelay: 0.5,
+        transitionDelay: 0.6,
         exitDelay: 0.4
     }, {
         name: 'Tech Stack',
