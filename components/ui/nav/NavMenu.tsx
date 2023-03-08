@@ -39,6 +39,12 @@ const menuItems = [
         path: '/tech-stack',
         transitionDelay: 0.4,
         exitDelay: 0.2
+    }, {
+        name: 'Showcases',
+        id: 'showcase',
+        path: '/showcase',
+        transitionDelay: 0.4,
+        exitDelay: 0.2
     },
 ];
 

@@ -2,15 +2,16 @@ import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import BoyColor from 'static/svg/boy-color.svg'
 import BoyPremium from 'static/svg/boy-premium.svg'
+import { Heading } from 'components/controls'
 
 const About = () => {
     return (
         <>
             <div
                 className='grid gap-y-10 m-auto xl:p-28'>
-                <h1 className='font-bold text-center text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
+                <Heading className='font-bold text-center text-4xl'>
                     About Me
-                </h1>
+                </Heading>
                 <div className='grid grid-cols-2 gap-4'>
                     <motion.div
                         initial={{ x: -50, opacity: 0 }}
