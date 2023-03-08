@@ -65,7 +65,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ open, setOpen }) => {
             variants={variants}
             transition={{ duration: 0.5 }}
             exit="exit"
-            className={`z-0 fixed w-30 h-30 bg-black sm:pr-5 h-screen w-screen`}>
+            className={`z-50 fixed w-30 h-30 bg-black sm:pr-5 h-screen w-screen`}>
             <div className='grid justify-end h-20 md:my-4 md:px-10 min-w-full'>
                 <Button className='my-auto mx-5 sm:mx-0' onClick={() => setOpen(!open)} leadIcon={<GrClose />} >
                     Close
