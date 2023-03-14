@@ -35,7 +35,7 @@ The React Framework
 Install with `npm install next`
 ---
 ## react
-React is a JavaScript library for building user interfaces.
+React is a JavaScript library for building user interfaces.****
 
 [npm](http://npmjs.org/react) - [Homepage](https://reactjs.org/) - [Repository](git+https://github.com/facebook/react.git) - [Issues](https://github.com/facebook/react/issues) - Licence: MIT
 

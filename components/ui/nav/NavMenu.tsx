@@ -13,37 +13,37 @@ const menuItems = [
         name: 'Welcome',
         id: 'welcome',
         path: '/#welcome',
-        transitionDelay: 1.2,
+        transitionDelay: 0.2,
         exitDelay: 1
     }, {
         name: 'Introduction',
         id: 'introduction',
         path: '/#introduction',
-        transitionDelay: 1,
+        transitionDelay: 0.4,
         exitDelay: 0.8
     }, {
         name: 'About',
         id: 'about',
         path: '/#about',
-        transitionDelay: 0.8,
+        transitionDelay: 0.6,
         exitDelay: 0.6
     }, {
         name: 'Work',
         id: 'work',
         path: '/#work',
-        transitionDelay: 0.6,
+        transitionDelay: 0.8,
         exitDelay: 0.4
     }, {
         name: 'Tech Stack',
         id: 'tech-stack',
         path: '/tech-stack',
-        transitionDelay: 0.4,
+        transitionDelay: 1,
         exitDelay: 0.2
     }, {
         name: 'Showcases',
         id: 'showcase',
         path: '/showcase',
-        transitionDelay: 0.4,
+        transitionDelay: 1.2,
         exitDelay: 0.2
     },
 ];
@@ -83,9 +83,11 @@ const NavMenu: React.FC<NavMenuProps> = ({ open, setOpen }) => {
                         return (
                             <motion.li
                                 key={id}
-                                initial={{ y: 40, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ duration: transitionDelay }}
+                                initial={{ opacity: 0 }}
+                                animate={{
+                                    opacity: 1,
+                                }}
+                                transition={{ delay: transitionDelay }}
                                 exit={{
                                     opacity: 0,
                                     y: 40,

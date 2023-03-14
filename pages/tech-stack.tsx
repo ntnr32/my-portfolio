@@ -16,7 +16,7 @@ const TechStack = () => {
                 <section>
                     <h2>Tools</h2>
                     <div className='grid'>
-                        <Image src="" alt='' />
+                        <Image src={"./svg/vscode.svg"} alt='' />
                     </div>
                 </section>
                 <section>
