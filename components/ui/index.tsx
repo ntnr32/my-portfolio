@@ -11,6 +11,7 @@ import About from './main/about/About';
 import Work from './main/work/Work';
 import ContactUs from './main/contact/ContactUs';
 import Footer from './footer/Footer';
+import GridSection from './section/GridSection';
 
 export {
     Layout,
@@ -25,6 +26,7 @@ export {
     About,
     Work,
     ContactUs,
-    Footer
+    Footer,
+    GridSection
 }
 

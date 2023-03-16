@@ -9,6 +9,7 @@ export {
     About,
     Work,
     ContactUs,
-    Footer
+    Footer,
+    GridSection
 } from './ui'
 export { NavButton, Button, Input } from './controls'
