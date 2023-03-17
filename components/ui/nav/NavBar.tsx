@@ -10,18 +10,6 @@ const sayHello = () => {
     window.location.href = `mailto:${CONSTANT.EMAIL_ADDRESS}`
 }
 
-const menuItems = [
-    {
-        name: 'Home',
-        id: 'home',
-        path: '/'
-    }, {
-        name: 'Tech Stack',
-        id: 'tech-stack',
-        path: '/tech-stack'
-    },
-];
-
 const NavBar = () => {
 
     const [open, setOpen] = useState<boolean>(false);

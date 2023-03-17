@@ -57,6 +57,20 @@ const tools = [{
     icon: CgGoogleTasks
 }]
 
+
+// Design 
+// Figma, Fig Jam , Mockups
+// Font-end 
+// React, NextJS, Typescript, 
+// CSS framework
+// 1. TailwindCSS, Dasiy UI, Material UI, Fluent UI
+// State Management Framework
+// 1. Redux toolkit, Zudstand, React Query 
+// Animation
+// 1. Framer Motion
+// Backed 
+// .Net 
+
 const stack = [{
     id: 1,
     text: "NextJS",
@@ -81,7 +95,7 @@ const stack = [{
 
 const TechStack = () => {
     return (
-        <div className='mx-6 md:mx-14 py-16 md:py-24' >
+        <div className='mx-6 md:mx-14 mt-20' >
             <div className='grid gap-4' >
                 <Heading className='text-xl md:text-4xl text-center h-min'>
                     Tech Stack
@@ -94,7 +108,11 @@ const TechStack = () => {
                 <GridSection title='Tools' className=''>
                     {tools.map(({ id, text, icon }) => (
                         <span key={id}>
-                            {React.createElement(icon, { className: "m-auto w-16 h-16 m-2 p-2 rounded-md hover:bg-gray-700" })}
+                            {
+                                React.createElement(icon, {
+                                    className: "m-auto w-16 h-16 m-2 p-2 rounded-md transition hover:bg-gray-800 hover:scale-125"
+                                })
+                            }
                         </span>
                     ))}
                 </GridSection>
@@ -104,3 +122,5 @@ const TechStack = () => {
 }
 
 export default TechStack
+
+TechStack.displayName = "Stack"

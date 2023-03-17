@@ -9,3 +9,5 @@ const CodeSnippets = () => {
 }
 
 export default CodeSnippets
+
+CodeSnippets.displayName = 'Code Snippets'
