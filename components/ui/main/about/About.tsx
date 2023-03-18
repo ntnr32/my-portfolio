@@ -2,7 +2,7 @@ import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import BoyColor from 'static/svg/boy-color.svg'
 import BoyPremium from 'static/svg/boy-premium.svg'
-import { Heading } from 'components/controls'
+import { Heading } from 'components'
 
 const About = () => {
     return (

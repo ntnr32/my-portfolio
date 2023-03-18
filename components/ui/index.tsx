@@ -12,6 +12,7 @@ import Work from './main/work/Work';
 import ContactUs from './main/contact/ContactUs';
 import Footer from './footer/Footer';
 import GridSection from './section/GridSection';
+import Card from './Card/Card';
 
 export {
     Layout,
@@ -27,6 +28,7 @@ export {
     Work,
     ContactUs,
     Footer,
-    GridSection
+    GridSection,
+    Card
 }
 

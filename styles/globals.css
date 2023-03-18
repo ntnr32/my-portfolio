@@ -29,6 +29,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .square {
+    aspect-ratio: 1 / 1;
+  }
+}
+
 @layer base {
   @font-face {
     font-family: "KnewaveRegular";
@@ -144,9 +150,12 @@ h1:hover > .wave {
   }
 }
 
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+}
+
 /* Hide Scrollbar */
 /* ::-webkit-scrollbar {
   display: none;
 } */
-
-

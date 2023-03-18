@@ -1,7 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
-import { Heading } from 'components/controls'
-import { GridSection } from 'components/ui'
+import { Heading, GridSection } from 'components'
+
 import { TbBrandVscode } from 'react-icons/tb'
 import { SiVisualstudio, SiPostman, SiNotion, SiSlack, SiDiscord, SiGooglechrome, SiGooglecalendar } from 'react-icons/si'
 import { BsTerminalFill, BsGithub } from 'react-icons/bs'

@@ -10,6 +10,7 @@ export {
     Work,
     ContactUs,
     Footer,
-    GridSection
+    GridSection,
+    Card
 } from './ui'
-export { NavButton, Button, Input } from './controls'
+export { NavButton, Button, Input, Heading } from './controls'
