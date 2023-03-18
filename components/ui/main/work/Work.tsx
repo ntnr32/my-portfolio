@@ -1,6 +1,6 @@
-import { Heading } from 'components/controls'
-import { motion, AnimatePresence } from 'framer-motion'
 import React from 'react'
+import { Heading } from 'components'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const Work = () => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Heading } from 'components/controls'
+import { Heading } from 'components'
 
 const Showcase = () => {
     return (
