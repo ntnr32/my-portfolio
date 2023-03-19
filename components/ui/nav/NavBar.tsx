@@ -16,8 +16,8 @@ const NavBar = () => {
     const handleOpen = () => setOpen(!open);
 
     return (
-        <header className=''>
-            <div className='top-0 left-0 fixed h-20 flex justify-between md:my-4 md:px-10 min-w-full'>
+        <header className='top-0 left-0 fixed h-20 min-w-full z-50 bg-primary'>
+            <div className='flex justify-between md:my-4 md:px-10'>
                 <Logo
                     path='/'
                     text={CONSTANT.TITLE_NAME}
