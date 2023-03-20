@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Card, Heading } from 'components'
 import axios from 'axios';
 import { Gist } from '../../common/models/gist'
+import { formatDate } from 'utils/utility';
 
 const snippets = [
   {
@@ -127,6 +128,8 @@ const snippets = [
   }
 ]
 
+const imageUrl = '/images/snippets/1.png';
+
 const fetchAllGists = async () => {
   const url = `https://api.github.com/users/ntnr32/gists`;
   const response = await axios.get(url);
@@ -153,14 +156,15 @@ const CodeSnippets = () => {
       <div className='font-poppins grid-cards gap-6'>
         {
           gists?.map(
-            ({ id, owner, description, created_at }) => (
+            ({ id, description, created_at, html_url }) => (
               <Card
                 key={id}
                 id={`code-snippets/${id}`}
-                imageUrl={owner.avatar_url}
+                imageUrl={imageUrl}
                 title={description}
                 body={description}
-                footer={created_at}
+                link={html_url}
+                footer={formatDate(created_at)}
               />
             )
           )

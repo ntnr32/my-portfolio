@@ -2,16 +2,18 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link';
+import { HiExternalLink } from 'react-icons/hi'
 
 interface CardProps {
     id: string;
     imageUrl: string;
     title: string;
     body: string;
+    link: string;
     footer: string;
 }
 
-const Card: React.FC<CardProps> = ({ id, imageUrl, title, body, footer }) => {
+const Card: React.FC<CardProps> = ({ id, imageUrl, title, body, link, footer }) => {
     return (
         <Link href={id}>
             <motion.div
@@ -40,9 +42,13 @@ const Card: React.FC<CardProps> = ({ id, imageUrl, title, body, footer }) => {
                         <h2 className='text-lg mb-2'>{title}</h2>
                         <p className='text-xs'>{body}</p>
                     </article>
-                    <div className='card-footer grid justify-between text-xs p-6 -mt-6'>
-                        <span>{footer}</span>
-                        <span></span>
+                    <div className='card-footer grid grid-flow-col justify-between text-xs p-4 border-t border-zinc-700'>
+                        <span className='max-w-[1/2]'>{footer}</span>
+                        <span className='max-w-[1/2]'>{
+                            <Link href={link} target="_blank" passHref>
+                                <HiExternalLink />
+                            </Link>
+                        }</span>
                     </div>
                 </div>
             </motion.div>
