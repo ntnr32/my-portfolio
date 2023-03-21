@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Heading } from 'components'
+import useSWR, { Fetcher } from 'swr'
 import axios from 'axios';
-import { Gist } from '../../common/models/gist'
+import { Gist } from 'common/models/gist'
 import { formatDate } from 'utils/utility';
+import { Card, Heading } from 'components'
+import * as CONSTANTS from 'common/utils/constant'
 
 const snippets = [
   {
@@ -130,41 +132,28 @@ const snippets = [
 
 const imageUrl = '/images/snippets/1.png';
 
-const fetchAllGists = async () => {
-  const url = `https://api.github.com/users/ntnr32/gists`;
-  const response = await axios.get(url);
-  return response.data as Array<Gist>;
-}
+const fetcher: Fetcher<Array<Gist>, any> = (url: string) => axios.get(url).then(res => res.data)
 
 const CodeSnippets = () => {
 
-  const [gists, setGists] = useState<Array<Gist>>();
-  const [comments, setComments] = useState<string>("");
-
-  useEffect(() => {
-    fetchAllGists()
-      .then(data => {
-        setGists(data);
-        return data;
-      });
-  }, [])
-
+  const { data, error, isLoading } = useSWR(`${CONSTANTS.API.BASE_URL}/users/ntnr32/gists`, fetcher)
 
   return (
     <div className='mx-6 m-20 md:mx-20 grid gap-10 max-w-full'>
       <Heading className='text-xl md:text-4xl text-center h-min'>
         Code Snippets
       </Heading>
+      {isLoading && <div>Loading....</div>}
+      {error && <div>Error</div>}
       <div className='font-poppins grid-cards gap-6'>
         {
-          gists?.map(
+          data?.map(
             ({ id, description, created_at, html_url }) => (
               <Card
                 key={id}
                 id={id}
                 imageUrl={imageUrl}
                 title={description}
-                body={description}
                 link={html_url}
                 footer={formatDate(created_at)}
               />

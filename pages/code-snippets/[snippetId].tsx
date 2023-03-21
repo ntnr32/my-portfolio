@@ -1,13 +1,15 @@
+import React from 'react'
 import Head from 'next/head';
 import { useRouter } from 'next/router'
-import React from 'react'
+import useSWR, { Fetcher } from 'swr'
+import axios from 'axios';
+import * as CONSTANTS from 'common/utils/constant'
 
 const Snippet = () => {
-
     const { query } = useRouter();
-
     const title = `Snippet - ${query.snippetId}`;
 
+    
     return (
         <>
             <Head>

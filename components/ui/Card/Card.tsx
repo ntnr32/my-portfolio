@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link';
@@ -6,34 +6,24 @@ import axios from 'axios';
 import { Comment } from 'common/models/comment';
 import { HiExternalLink } from 'react-icons/hi'
 import { ImSpinner10 } from 'react-icons/im';
+import useSWR, { Fetcher } from 'swr';
+import * as CONSTANTS from 'common/utils/constant'
+
 
 interface CardProps {
     id: string;
     imageUrl: string;
     title: string;
-    body: string;
     link: string;
     footer: string;
 }
 
-const fetchComments = async (gistId: string) => {
-    console.log(`Fetching comments ${gistId}`)
-    const url = `https://api.github.com/gists/${gistId}/comments`;
-    const response = await axios.get(url);
-    return response.data;
-}
+const fetcher: Fetcher<Array<Comment>, any> = (url: string) => axios.get(url).then(res => res.data)
 
-const Card: React.FC<CardProps> = ({ id, imageUrl, title, body, link, footer }) => {
 
-    const [description, setDescription] = useState("")
-    useEffect(() => {
-        fetchComments(id)
-            .then((data: Array<Comment>) => {
-                if (data.length > 0) {
-                    setDescription(data[0].body)
-                }
-            });
-    }, [id])
+const Card: React.FC<CardProps> = ({ id, imageUrl, title, link, footer }) => {
+
+    const { data, error, isLoading } = useSWR(`${CONSTANTS.API.BASE_URL}/gists/${id}/comments`, fetcher)
 
     return (
         <Link href={`code-snippets/${id}`}>
@@ -61,11 +51,11 @@ const Card: React.FC<CardProps> = ({ id, imageUrl, title, body, link, footer }) 
                     </div>
                     <article className='card-body p-6 -mt-6'>
                         <h2 className='text-lg mb-2'>{title}</h2>
-                        {
-                            description
-                                ? <p className='text-xs'>{body}</p>
-                                : <ImSpinner10 />
-                        }
+                        <p className='text-xs'>
+                            {isLoading && <div>Loading....</div>}
+                            {error && <div>Error</div>}
+                            {data && data[0].body}
+                        </p>
                     </article>
                     <div className='card-footer grid grid-flow-col justify-between text-xs p-4 border-t border-zinc-700'>
                         <span className='max-w-[1/2]'>{footer}</span>
