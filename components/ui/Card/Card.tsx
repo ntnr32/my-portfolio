@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link';
+import axios from 'axios';
+import { Comment } from 'common/models/comment';
 import { HiExternalLink } from 'react-icons/hi'
+import { ImSpinner10 } from 'react-icons/im';
 
 interface CardProps {
     id: string;
@@ -13,9 +16,27 @@ interface CardProps {
     footer: string;
 }
 
+const fetchComments = async (gistId: string) => {
+    console.log(`Fetching comments ${gistId}`)
+    const url = `https://api.github.com/gists/${gistId}/comments`;
+    const response = await axios.get(url);
+    return response.data;
+}
+
 const Card: React.FC<CardProps> = ({ id, imageUrl, title, body, link, footer }) => {
+
+    const [description, setDescription] = useState("")
+    useEffect(() => {
+        fetchComments(id)
+            .then((data: Array<Comment>) => {
+                if (data.length > 0) {
+                    setDescription(data[0].body)
+                }
+            });
+    }, [id])
+
     return (
-        <Link href={id}>
+        <Link href={`code-snippets/${id}`}>
             <motion.div
                 className='cursor-pointer'
                 initial={{ opacity: 0, y: 300 }}
@@ -40,7 +61,11 @@ const Card: React.FC<CardProps> = ({ id, imageUrl, title, body, link, footer }) 
                     </div>
                     <article className='card-body p-6 -mt-6'>
                         <h2 className='text-lg mb-2'>{title}</h2>
-                        <p className='text-xs'>{body}</p>
+                        {
+                            description
+                                ? <p className='text-xs'>{body}</p>
+                                : <ImSpinner10 />
+                        }
                     </article>
                     <div className='card-footer grid grid-flow-col justify-between text-xs p-4 border-t border-zinc-700'>
                         <span className='max-w-[1/2]'>{footer}</span>

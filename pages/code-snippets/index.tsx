@@ -133,17 +133,19 @@ const imageUrl = '/images/snippets/1.png';
 const fetchAllGists = async () => {
   const url = `https://api.github.com/users/ntnr32/gists`;
   const response = await axios.get(url);
-  return response;
+  return response.data as Array<Gist>;
 }
 
 const CodeSnippets = () => {
 
-  const [gists, setGists] = useState<Array<Gist>>()
+  const [gists, setGists] = useState<Array<Gist>>();
+  const [comments, setComments] = useState<string>("");
+
   useEffect(() => {
     fetchAllGists()
-      .then((response) => {
-        setGists(response.data);
-        console.log(response);
+      .then(data => {
+        setGists(data);
+        return data;
       });
   }, [])
 
@@ -159,7 +161,7 @@ const CodeSnippets = () => {
             ({ id, description, created_at, html_url }) => (
               <Card
                 key={id}
-                id={`code-snippets/${id}`}
+                id={id}
                 imageUrl={imageUrl}
                 title={description}
                 body={description}
