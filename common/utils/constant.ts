@@ -4,6 +4,10 @@ export const TITLE_NAME = 'NITIN.';
 
 export const EMAIL_ADDRESS = 'ntnr32@gmail.com';
 
+export const API = {
+    BASE_URL: 'https://api.github.com'
+}
+
 // TODO: Implement multi-language support
 
 
