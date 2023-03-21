@@ -18,6 +18,7 @@
     "paths": {
       "utils/*": ["./common/utils/*"],
       "static/*": ["./common/static/*"],
+      "hooks/*": ["./common/hooks/*"],
       "components/*": ["./components/*", "./components"]
     }
   },
