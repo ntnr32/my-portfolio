@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import useSWR, { Fetcher } from 'swr'
-import axios from 'axios';
-import { Gist } from 'common/models/gist'
 import { formatDate } from 'utils/utility';
 import { Card, Heading } from 'components'
-import * as CONSTANTS from 'common/utils/constant'
+import { useGists } from 'hooks/api/useGists';
 
 const snippets = [
   {
@@ -132,11 +129,9 @@ const snippets = [
 
 const imageUrl = '/images/snippets/1.png';
 
-const fetcher: Fetcher<Array<Gist>, any> = (url: string) => axios.get(url).then(res => res.data)
-
 const CodeSnippets = () => {
 
-  const { data, error, isLoading } = useSWR(`${CONSTANTS.API.BASE_URL}/users/ntnr32/gists`, fetcher)
+  const { gists, isError, isLoading } = useGists();
 
   return (
     <div className='mx-6 m-20 md:mx-20 grid gap-10 max-w-full'>
@@ -144,10 +139,10 @@ const CodeSnippets = () => {
         Code Snippets
       </Heading>
       {isLoading && <div>Loading....</div>}
-      {error && <div>Error</div>}
+      {isError && <div>Error</div>}
       <div className='font-poppins grid-cards gap-6'>
         {
-          data?.map(
+          gists?.map(
             ({ id, description, created_at, html_url }) => (
               <Card
                 key={id}

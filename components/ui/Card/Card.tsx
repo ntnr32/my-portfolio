@@ -2,13 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link';
-import axios from 'axios';
-import { Comment } from 'common/models/comment';
 import { HiExternalLink } from 'react-icons/hi'
-import { ImSpinner10 } from 'react-icons/im';
-import useSWR, { Fetcher } from 'swr';
-import * as CONSTANTS from 'common/utils/constant'
-
+import { useComments } from 'hooks/api/useGistComments';
 
 interface CardProps {
     id: string;
@@ -18,12 +13,11 @@ interface CardProps {
     footer: string;
 }
 
-const fetcher: Fetcher<Array<Comment>, any> = (url: string) => axios.get(url).then(res => res.data)
-
+const commentIndex = 0;
 
 const Card: React.FC<CardProps> = ({ id, imageUrl, title, link, footer }) => {
 
-    const { data, error, isLoading } = useSWR(`${CONSTANTS.API.BASE_URL}/gists/${id}/comments`, fetcher)
+    const { comments, isError, isLoading } = useComments(id);
 
     return (
         <Link href={`code-snippets/${id}`}>
@@ -53,8 +47,8 @@ const Card: React.FC<CardProps> = ({ id, imageUrl, title, link, footer }) => {
                         <h2 className='text-lg mb-2'>{title}</h2>
                         <p className='text-xs'>
                             {isLoading && <div>Loading....</div>}
-                            {error && <div>Error</div>}
-                            {data && data[0].body}
+                            {isError && <div>Error</div>}
+                            {comments && comments[commentIndex].body}
                         </p>
                     </article>
                     <div className='card-footer grid grid-flow-col justify-between text-xs p-4 border-t border-zinc-700'>
