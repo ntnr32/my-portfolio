@@ -10,19 +10,26 @@ const Snippet = () => {
     const snippetId = query.snippetId ? query.snippetId : '';
     const { gist, isError, isLoading } = useGist(snippetId.toString());
     const title = `Snippet - ${gist?.fileName}`;
-    console.log(gist)
+    let content;
+    if (gist) {
+        content = gist.files[gist.fileName].content;
+    }
 
     return (
         <>
             <Head>
                 <title>{title}</title>
             </Head>
-            <div className='grid place-content-center h-screen'>
+            <div className='grid place-content-center m-20'>
                 <Heading className='font-bold'>
                     {title}
                 </Heading>
                 {isLoading && <div>Loading....</div>}
-                {gist && <pre>{gist.files[gist.fileName].content}</pre>}
+                <div className='h-full'>
+                    <pre>
+                        {content}
+                    </pre>
+                </div>
             </div>
         </>
     )
