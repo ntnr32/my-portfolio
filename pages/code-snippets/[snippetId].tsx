@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router'
 import { useGist } from 'hooks/api/useGist';
 import { Heading } from 'components';
+import Editor, { DiffEditor, useMonaco, loader } from "@monaco-editor/react";
 
 const Snippet = () => {
     const { query } = useRouter();
@@ -20,15 +21,28 @@ const Snippet = () => {
             <Head>
                 <title>{title}</title>
             </Head>
-            <div className='grid place-content-center m-20'>
+            <div className='grid place-content-center m-20 gap-5'>
                 <Heading className='font-bold'>
-                    {title}
+                    {gist?.description}
                 </Heading>
                 {isLoading && <div>Loading....</div>}
                 <div className='h-full'>
-                    <pre>
-                        {content}
-                    </pre>
+                    <Editor
+                        height="80vh"
+                        width="80vw"
+                        options={{
+                            readOnly: true,
+                            minimap: {
+                                enabled: false
+                            },
+                            wordWrap: 'on',
+                            hideCursorInOverviewRuler: true,
+                            scrollBeyondLastLine: false
+                        }}
+                        theme="vs-dark"
+                        defaultLanguage="typescript"
+                        defaultValue={content}
+                    />
                 </div>
             </div>
         </>
