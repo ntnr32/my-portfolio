@@ -1,17 +1,16 @@
-import React from 'react'
 import Head from 'next/head';
 import { useRouter } from 'next/router'
 import { useGist } from 'hooks/api/useGist';
-import * as CONSTANTS from 'common/utils/constant'
+import { Heading } from 'components';
 
 const Snippet = () => {
     const { query } = useRouter();
 
     //TODO: fix this - validate the snippet id
     const snippetId = query.snippetId ? query.snippetId : '';
-    const title = `Snippet - ${snippetId}`;
-
-    const { gist, isError, isLoading } = useGist(snippetId?.toString());
+    const { gist, isError, isLoading } = useGist(snippetId.toString());
+    const title = `Snippet - ${gist?.fileName}`;
+    console.log(gist)
 
     return (
         <>
@@ -19,10 +18,11 @@ const Snippet = () => {
                 <title>{title}</title>
             </Head>
             <div className='grid place-content-center h-screen'>
-                {title}
+                <Heading className='font-bold'>
+                    {title}
+                </Heading>
                 {isLoading && <div>Loading....</div>}
-                {isError && <div>Error</div>}
-                {gist && JSON.stringify(gist, null, 2)}
+                {gist && <pre>{gist.files[gist.fileName].content}</pre>}
             </div>
         </>
     )

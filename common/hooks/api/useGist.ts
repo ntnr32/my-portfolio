@@ -7,7 +7,12 @@ import * as CONSTANTS from 'common/utils/constant'
 const fetcher: Fetcher<GistItem, any> = (url: string) => axios.get(url).then(res => res.data)
 
 export function useGist(id: string) {
-    const { data, error, isLoading } = useSWR(`${CONSTANTS.API.BASE_URL}/gists/${id}`, fetcher)
+    const { data, error, isLoading } = useSWR(id ? `${CONSTANTS.API.BASE_URL}/gists/${id}` : null, fetcher)
+
+    if (data) {
+        const [fileName] = Object.keys(data.files);
+        data.fileName = fileName;
+    }
 
     return {
         gist: data,
