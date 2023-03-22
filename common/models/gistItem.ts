@@ -7,7 +7,8 @@ export interface GistItem {
     git_pull_url: string;
     git_push_url: string;
     html_url: string;
-    files: object;
+    files: Files;
+    fileName: string;
     public: boolean;
     created_at: string;
     updated_at: string;
@@ -19,6 +20,20 @@ export interface GistItem {
     forks: any[];
     history: History[];
     truncated: boolean;
+}
+
+export interface Files {
+    [key: string]: File;
+}
+
+export interface File {
+    filename: string;
+    type: string;
+    language: string;
+    raw_url: string;
+    size: number;
+    truncated: boolean;
+    content: string;
 }
 
 export interface History {

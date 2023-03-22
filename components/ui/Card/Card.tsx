@@ -18,6 +18,10 @@ const commentIndex = 0;
 const Card: React.FC<CardProps> = ({ id, imageUrl, title, link, footer }) => {
 
     const { comments, isError, isLoading } = useComments(id);
+    let content;
+    if (comments && comments.length > 0) {
+        content = comments[commentIndex].body;
+    }
 
     return (
         <Link href={`code-snippets/${id}`}>
@@ -46,17 +50,14 @@ const Card: React.FC<CardProps> = ({ id, imageUrl, title, link, footer }) => {
                     <article className='card-body p-6 -mt-6'>
                         <h2 className='text-lg mb-2'>{title}</h2>
                         <p className='text-xs'>
-                            {isLoading && <div>Loading....</div>}
-                            {isError && <div>Error</div>}
-                            {comments && comments[commentIndex].body}
+                            {isLoading && <>Loading....</>}
+                            {content}
                         </p>
                     </article>
                     <div className='card-footer grid grid-flow-col justify-between text-xs p-4 border-t border-zinc-700'>
                         <span className='max-w-[1/2]'>{footer}</span>
                         <span className='max-w-[1/2]'>{
-                            <Link href={link} target="_blank" passHref>
-                                <HiExternalLink />
-                            </Link>
+
                         }</span>
                     </div>
                 </div>
