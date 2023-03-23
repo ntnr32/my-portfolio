@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { formatDate } from 'utils/utility';
 import { Card, Heading } from 'components'
 import { useGists } from 'hooks/api/useGists';
+
 
 const snippets = [
   {
