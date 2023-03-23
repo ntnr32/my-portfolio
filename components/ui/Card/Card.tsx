@@ -7,7 +7,7 @@ import { useComments } from 'hooks/api/useGistComments';
 
 interface CardProps {
     id: string;
-    imageUrl: string;
+    imageUrl: any;
     title: string;
     link: string;
     footer: string;

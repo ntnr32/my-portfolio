@@ -27,7 +27,6 @@ module.exports = {
         circuit: `url("${subPath}/svg/circuit.svg")`,
         overlay: `url("${subPath}/svg/overlay_bg.svg")`,
         dots: `url("${subPath}/images/dots.png")`,
-        snippet: `url("${subPath}/images/snippets/1.png")`
       },
       textColor: {
         accent: 'var(--color-text-accent)',

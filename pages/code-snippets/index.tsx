@@ -2,7 +2,7 @@ import React from 'react'
 import { formatDate } from 'utils/utility';
 import { Card, Heading } from 'components'
 import { useGists } from 'hooks/api/useGists';
-
+import sampleImage from '../../common/static/images/snippets/1.png'
 
 const snippets = [
   {
@@ -148,7 +148,7 @@ const CodeSnippets = () => {
               <Card
                 key={id}
                 id={id}
-                imageUrl={imageUrl}
+                imageUrl={sampleImage}
                 title={description}
                 link={html_url}
                 footer={formatDate(created_at)}
