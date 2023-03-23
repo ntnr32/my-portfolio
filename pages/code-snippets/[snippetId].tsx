@@ -27,22 +27,24 @@ const Snippet = () => {
                 </Heading>
                 {isLoading && <div>Loading....</div>}
                 <div className='h-full'>
-                    <Editor
-                        height="80vh"
-                        width="80vw"
-                        options={{
-                            readOnly: true,
-                            minimap: {
-                                enabled: false
-                            },
-                            wordWrap: 'on',
-                            hideCursorInOverviewRuler: true,
-                            scrollBeyondLastLine: false
-                        }}
-                        theme="vs-dark"
-                        defaultLanguage="typescript"
-                        defaultValue={content}
-                    />
+                    {
+                        content && <Editor
+                            height="80vh"
+                            width="80vw"
+                            options={{
+                                readOnly: true,
+                                minimap: {
+                                    enabled: false
+                                },
+                                wordWrap: 'on',
+                                hideCursorInOverviewRuler: true,
+                                scrollBeyondLastLine: false
+                            }}
+                            theme="vs-dark"
+                            defaultLanguage="typescript"
+                            defaultValue={content}
+                        />
+                    }
                 </div>
             </div>
         </>

@@ -151,8 +151,9 @@ h1:hover > .wave {
 }
 
 .grid-cards {
+  --min-width: 300px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-width), 2fr));
 }
 
 /* Hide Scrollbar */
