@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 
 interface ButtonProps {
     className?: string
@@ -9,14 +9,14 @@ interface ButtonProps {
     variant?: "regular" | "outline"
 }
 
+const getVariantClasses = (variant: "regular" | "outline") => {
+    return variant === "outline" ? "border border-primary bg-primary text-primary" : "bg-invert text-invert";
+}
+
 const Button: React.FC<ButtonProps> = ({ className, children, onClick, leadIcon, tailIcon, variant = "regular" }) => {
     //TODO: Create a new button component which only shows icon without box 
-    const [style, setStyle] = useState('');
 
-    useEffect(() => {
-        const buttonStyle = variant === "outline" ? "border border-primary bg-primary text-primary" : "bg-invert text-invert";
-        setStyle(buttonStyle);
-    }, [variant])
+    const style = useMemo(() => getVariantClasses(variant), [variant]);
 
     return (
         <button className={`flex gap-4 px-4 py-2 place-items-center ${style} ${className}`}
