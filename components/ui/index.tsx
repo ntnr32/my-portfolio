@@ -13,6 +13,7 @@ import ContactUs from './main/contact/ContactUs';
 import Footer from './footer/Footer';
 import GridSection from './section/GridSection';
 import Card from './Card/Card';
+import Loading from './loading/Loading';
 
 export {
     Layout,
@@ -29,6 +30,7 @@ export {
     ContactUs,
     Footer,
     GridSection,
-    Card
+    Card,
+    Loading
 }
 

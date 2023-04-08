@@ -11,6 +11,7 @@ export {
     ContactUs,
     Footer,
     GridSection,
-    Card
+    Card,
+    Loading
 } from './ui'
 export { NavButton, Button, Input, Heading } from './controls'
