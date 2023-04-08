@@ -13,8 +13,7 @@ const Loading = () => {
           height: 0,
           transition: {
             ease: "easeInOut",
-            duration: 0.3,
-            delay: 1.2,
+            duration: 0.3
           },
         }}
       >

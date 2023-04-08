@@ -34,7 +34,7 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => {
     setDarkMode(true);
     const ref = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 3000);
 
     () => {
         clearTimeout(ref);
