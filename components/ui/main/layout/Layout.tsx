@@ -37,18 +37,17 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => {
     }, 3000);
 
     () => {
-        clearTimeout(ref);
+      clearTimeout(ref);
     };
   }, []);
 
-  return loading ? (
-    <Loading />
-  ) : (
+  return (
     <main
       onScroll={onScrollHandler}
       ref={pageRef as React.RefObject<HTMLDivElement>}
       className="font-MajorMonoDisplay select-none bg-dots h-screen md:snap-y snap-mandatory overflow-y-scroll scroll-smooth"
     >
+      {loading && <Loading />}
       <NavBar />
       {children}
       {/* {!isLastScreen && <Arrow />} */}
