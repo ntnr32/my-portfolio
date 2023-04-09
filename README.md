@@ -1,8 +1,9 @@
 ![Portfolio Preview Image](./portfolio1.jpg)
-# Welcome to My Digital Portfolio 🎉
-## Hello 👋
 
-I'm NITIN, this is my portfolio project, sharing my passion of creating beautiful and functional site. Feel free to look around.
+<h1 align="center">Here's what I've done</h1>
+
+
+Hello 👋! I'm NITIN, this is my portfolio project, sharing my passion of creating beautiful and functional site. Feel free to look around.
 
 ## 🥤 Take a Tour 
 
@@ -11,9 +12,9 @@ Ready to see what I've been up to? Head over to [ntnr32.github.io/my-portfolio](
 ##  🧑‍💻⚙️ Tech Stack
 I've used the following technologies and frameworks to build my portfolio site:
 
-[Next JS]() for server-side rendering, static site generation, and dynamic routing
-[Tailwind CSS]() for efficient and responsive styling
-[Framer Motion]() for smooth and dynamic animations and transitions
+- [Next JS]() for server-side rendering, static site generation, and dynamic routing
+- [Tailwind CSS]() for efficient and responsive styling
+- [Framer Motion]() for smooth and dynamic animations and transitions
 
 ## 🚵 Features to Discover 
 My portfolio site offers a range of features designed to showcase my work and provide a seamless user experience, including:
@@ -31,17 +32,17 @@ My portfolio site offers a range of features designed to showcase my work and pr
 If you're interested in experimenting with the code or building your own portfolio site using Next JS, Tailwind CSS, and Framer Motion, you can:
 
 - Clone this repository to your local machine
-- Install the required dependencies using npm install
-- Run the development server using npm run dev
+- Install the required dependencies using `"npm install"`
+- Run the development server using `"npm run dev"`
 - Explore, experiment, and have fun!
 
 ## 🤙 Let's Connect
 
 I'm always looking to collaborate and connect with fellow web developers and tech enthusiasts. Feel free to reach out to me through the contact form, or connect with me on social media!
 
-- Github
-- LinkedIn
-- Instagram
+- [Github](https://github.com/ntnr32)
+- [LinkedIn](https://www.linkedin.com/in/nitin-res)
+- [Instagram](https://www.instagram.com/ntnr34)
 
 ## License
 
