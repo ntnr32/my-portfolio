@@ -5,6 +5,7 @@ import { TbBrandVscode } from 'react-icons/tb'
 import { SiVisualstudio, SiPostman, SiNotion, SiSlack, SiDiscord, SiGooglechrome, SiGooglecalendar } from 'react-icons/si'
 import { BsTerminalFill, BsGithub } from 'react-icons/bs'
 import { CgFigma, CgGoogleTasks } from 'react-icons/cg'
+import EraserIOIcon from 'static/svg/eraser-io.svg'
 
 const tools = [{
     id: 1,
@@ -92,6 +93,19 @@ const stack = [{
     imageUrl: "/svg/vscode.sv1"
 }];
 
+const onlineTools = [{
+    id: 1,
+    text: "Eraser.io",
+    icon: EraserIOIcon
+}]
+
+const uiLibraries = [{
+    id: 1,
+    text: "React Icons",
+    icon: EraserIOIcon
+}]
+
+
 const TechStack = () => {
     return (
         <div className='mx-6 md:mx-14 mt-20' >
@@ -106,6 +120,28 @@ const TechStack = () => {
             <div className='grid gap-10 text-xs md:text-base md:m-14 text-center mt-10'>
                 <GridSection title='Tools' className=''>
                     {tools.map(({ id, text, icon }) => (
+                        <span key={id}>
+                            {
+                                React.createElement(icon, {
+                                    className: "m-auto w-16 h-16 m-2 p-2 rounded-md transition hover:bg-gray-800 hover:scale-125"
+                                })
+                            }
+                        </span>
+                    ))}
+                </GridSection>
+                <GridSection title='Online Tools' className=''>
+                    {onlineTools.map(({ id, text, icon }) => (
+                        <span key={id}>
+                            {
+                                React.createElement(icon, {
+                                    className: "m-auto w-16 h-16 m-2 p-2 rounded-md transition hover:bg-gray-800 hover:scale-125"
+                                })
+                            }
+                        </span>
+                    ))}
+                </GridSection>
+                <GridSection title='UI Libraries' className=''>
+                    {uiLibraries.map(({ id, text, icon }) => (
                         <span key={id}>
                             {
                                 React.createElement(icon, {
